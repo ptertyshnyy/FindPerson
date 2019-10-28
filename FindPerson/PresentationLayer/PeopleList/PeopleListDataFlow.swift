@@ -10,6 +10,17 @@ import Foundation
 
 internal enum PeopleListDataFlow {
     
+    enum Item {
+        case message(title: String)
+        case people(people: PeopleModel)
+        case loading
+    }
+    
+    struct PeopleModel {
+        let title: String
+        let created: String
+    }
+    
     enum Load {
 
         struct Request { }
@@ -20,17 +31,6 @@ internal enum PeopleListDataFlow {
             let items: [Item]
         }
         
-    }
-    
-    enum Item {
-        case message(title: String)
-        case people(people: PeopleModel)
-        case loading
-    }
-    
-    struct PeopleModel {
-        let title: String
-        let created: String
     }
     
     enum NameInput {

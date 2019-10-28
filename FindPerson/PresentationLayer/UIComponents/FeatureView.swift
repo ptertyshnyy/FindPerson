@@ -12,19 +12,13 @@ internal class FeatureView: UIView {
     
     // MARK: - Init
     
-    private let titleImage: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = #imageLiteral(resourceName: "infoIcon").withRenderingMode(.alwaysTemplate)
-        
-        return imageView
-    }()
+    private let titleImage: UIImageView = UIImageView()
     
     private let categoryLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 13.0)
         label.textAlignment = .left
-        label.textColor = .black
-        label.alpha = 0.5
+        label.textColor = UIColor.black.withAlphaComponent(0.5)
         
         return label
     }()

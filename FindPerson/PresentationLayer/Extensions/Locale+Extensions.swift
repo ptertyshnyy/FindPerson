@@ -15,4 +15,3 @@ extension Locale {
         return Locale(identifier: languageId)
     }
 }
-

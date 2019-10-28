@@ -83,7 +83,6 @@ extension RootViewController: PeopleListModuleOutput {
         viewController.transitioningDelegate = self
         present(viewController, animated: true)
     }
-    
 }
 
 extension RootViewController: PeopleDetailModuleOutput {
@@ -113,5 +112,4 @@ extension RootViewController: UIViewControllerTransitioningDelegate {
         UIViewControllerInteractiveTransitioning? {
             return dismissInteractor.hasStarted ? dismissInteractor : nil
     }
-    
 }

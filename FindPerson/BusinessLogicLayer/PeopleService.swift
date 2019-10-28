@@ -72,7 +72,7 @@ internal class PeopleServiceImpl: PeopleService {
         return people
     }
     
-    private func mapGender(gender: String) -> Gender {
+    private func mapGender(gender: String) -> Gender? {
         switch gender {
         case "male":
             return .male
@@ -83,7 +83,7 @@ internal class PeopleServiceImpl: PeopleService {
         case "n/a":
             return .na
         default:
-            return .unknown
+            return nil
         }
     }
     

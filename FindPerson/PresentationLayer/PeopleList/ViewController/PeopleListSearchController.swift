@@ -14,8 +14,6 @@ internal class PeopleListSearchController: UISearchController {
     
     // MARK: - Properties
     
-    private let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
-    
     private let disposeBag = DisposeBag()
 
     var onPeopleSearch: ((String) -> Void)?
@@ -28,8 +26,6 @@ internal class PeopleListSearchController: UISearchController {
 
         obscuresBackgroundDuringPresentation = false
         searchBar.delegate = self
-        
-        searchBar.addSubview(activityIndicator)
         
         setupSearchBar()
     }
